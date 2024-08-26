@@ -1,0 +1,3 @@
+C:/Users/kamse/Documents/Vast/build/CMakeFiles/LunarMiningSim.dir
+C:/Users/kamse/Documents/Vast/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/kamse/Documents/Vast/build/CMakeFiles/ZERO_CHECK.dir
