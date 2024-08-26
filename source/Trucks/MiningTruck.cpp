@@ -58,9 +58,9 @@ void MiningTruck::Update(unsigned long time, std::vector<UnloadStation*>& statio
         {
             if (nullptr != _currentSite)
             {
-                bool is_mining_done = _currentSite->MineSite();
+                bool mining_in_progress = _currentSite->MineSite();
 
-                if (false == is_mining_done)
+                if (true == mining_in_progress)
                 {
                     _totalMiningTime++;
                 }

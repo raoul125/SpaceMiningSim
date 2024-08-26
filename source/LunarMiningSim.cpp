@@ -15,7 +15,10 @@ int main()
 {
     Simulator lunar_sim;
     // Initialize the simulation with 1 truck, 3 mining sites, and 1 unload station
-    lunar_sim.Initialize(3, 100, 2);
+    lunar_sim.Initialize(1, 2, 2);
     lunar_sim.Run();
+
+    std::cout << "Done Running" << std::endl;
+
     return 0;
 }

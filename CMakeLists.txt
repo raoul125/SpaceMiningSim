@@ -19,5 +19,13 @@ file(GLOB_RECURSE HEADERS "${SOURCE_DIR}/*.h")
 # Add all source files
 file(GLOB_RECURSE SOURCES "${SOURCE_DIR}/*.cpp")
 
+# Enable Debug Symbols for Debug Builds
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
+
 # Add the source files to the project
 add_executable(LunarMiningSim ${SOURCES} ${HEADERS})
+
+# Set build types if not already set
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Debug CACHE STRING "Build type (Debug, Release)" FORCE)
+endif()
