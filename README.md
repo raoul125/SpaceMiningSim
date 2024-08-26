@@ -78,7 +78,7 @@ The simulation operates in discrete time steps, with each step representing a un
 1. **Run the simulation with the desired parameters**
     ```bash
     ./run.sh <numtrucks> <numSites> <numStations>
-- Replace <numtrucks>, <numSites>, and <numStations> with the desired number of trucks, mining sites, and unload stations, respectively.
+- Replace numtrucks, numSites, and numStations with the desired number of trucks, mining sites, and unload stations, respectively.
 
 ## Future Enhancements
 
