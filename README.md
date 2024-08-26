@@ -6,25 +6,25 @@ This project simulates a lunar Helium-3 mining operation, modeling the interacti
 ## Project Structure
 
 The project is organized as follows:
-├── source
-├  ├── Simulator
-├  │ ├── Simulator.cpp 
-├  │ └── Simulator.h 
-├  ├── Trucks
-├  │ ├── MiningTruck.cpp 
-├  │ └── MiningTruck.h 
-├  ├── Sites 
-├  │ ├── MiningSite.cpp 
-├  │ └── MiningSite.h 
-├  ├── Stations 
-├  │ ├── UnloadStation.cpp 
-├  │ └── UnloadStation.h 
-├  └── LunarMiningSim.cpp
-├── CMakeLists.txt
-├── build.sh
-├── run.sh
-├── .clang-format
-├── .gitignore
+├── source 
+│ ├── Simulator 
+│ │ ├── Simulator.cpp 
+│ │ └── Simulator.h 
+│ ├── Trucks 
+│ │ ├── MiningTruck.cpp 
+│ │ └── MiningTruck.h 
+│ ├── Sites 
+│ │ ├── MiningSite.cpp 
+│ │ └── MiningSite.h 
+│ ├── Stations 
+│ │ ├── UnloadStation.cpp 
+│ │ └── UnloadStation.h 
+│ └── LunarMiningSim.cpp 
+├── CMakeLists.txt 
+├── build.sh 
+├── run.sh 
+├── .clang-format 
+├── .gitignore 
 ├── README.md
 
 ## Simulation Logic
@@ -55,7 +55,29 @@ The simulation operates in discrete time steps, with each step representing a un
 
 ## Running the Simulation
 
-To run the simulation, compile the source code and execute the compiled executable. The simulation parameters (number of trucks, sites, and stations) can be adjusted in the `Simulator.cpp` file.
+### Requirements
+
+- **Linux:**
+    - CMake
+    - g++ compiler
+- **Windows:**
+    - CMake
+    - Visual Studio (with C++ compiler)
+
+### Compilation
+
+1. **Navigate to the project directory:**
+   ```bash
+   cd SpaceMiningSim
+2. **Compile the project using the provided script:**
+    ```bash
+   ./build.sh
+
+### Execution
+1. **Run the simulation with the desired parameters**
+    ```bash
+    ./run.sh <numtrucks> <numSites> <numStations>
+    * Replace <numtrucks>, <numSites>, and <numStations> with the desired number of trucks, mining sites, and unload stations, respectively.
 
 ## Future Enhancements
 
