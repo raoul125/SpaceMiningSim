@@ -6,20 +6,21 @@ This project simulates a lunar Helium-3 mining operation, modeling the interacti
 ## Project Structure
 
 The project is organized as follows:
-├── source 
-│ ├── Simulator 
+├── source/ 
+│ ├── Simulator/ 
 │ │ ├── Simulator.cpp 
 │ │ └── Simulator.h 
-│ ├── Trucks 
+│ ├── Trucks/ 
 │ │ ├── MiningTruck.cpp 
 │ │ └── MiningTruck.h 
-│ ├── Sites 
+│ ├── Sites/ 
 │ │ ├── MiningSite.cpp 
 │ │ └── MiningSite.h 
-│ ├── Stations 
+│ ├── Stations/ 
 │ │ ├── UnloadStation.cpp 
 │ │ └── UnloadStation.h 
-│ └── LunarMiningSim.cpp 
+│ └── LunarMiningSim.cpp
+├── Output/ 
 ├── CMakeLists.txt 
 ├── build.sh 
 ├── run.sh 

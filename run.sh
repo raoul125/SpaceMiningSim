@@ -17,5 +17,11 @@ else
   exit 1
 fi
 
-mv station_stat.txt Output/
-mv truck_stat.txt Output/
+# Check if the files exist and move them if they do
+if [ -f station_stat.txt ]; then
+  mv station_stat.txt Output/
+fi
+
+if [ -f truck_stat.txt ]; then
+  mv truck_stat.txt Output/
+fi

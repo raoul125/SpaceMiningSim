@@ -136,7 +136,7 @@ UnloadStation* MiningTruck::FindBestUnloadStation(std::vector<UnloadStation*>& s
 
     UnloadStation* station_with_shortest_wait_time = stations[0];
 
-    for (unsigned int ii = 1; ii < stations.size(); ii++)
+    for (unsigned int ii = 0; ii < stations.size(); ii++)
     {
         if (false == stations[ii]->GetIsBusy())
         {
