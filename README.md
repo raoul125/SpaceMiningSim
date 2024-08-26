@@ -20,7 +20,9 @@ The project is organized as follows:
 │ │ ├── UnloadStation.cpp 
 │ │ └── UnloadStation.h 
 │ └── LunarMiningSim.cpp
-├── Output/ 
+├── Output/
+├── docs/
+├── Doxygenfile
 ├── CMakeLists.txt 
 ├── build.sh 
 ├── run.sh 
