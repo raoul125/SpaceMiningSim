@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b" kind="dir">
+    <compoundname>source</compoundname>
+    <innerdir refid="dir_c1dc6b2b08a70392eb716f94e690ed4d">source/Simulator</innerdir>
+    <innerdir refid="dir_3caca9724464a36eb0330ae33f9b1375">source/Sites</innerdir>
+    <innerdir refid="dir_4a6686df91811a5ddcd8aaae8bb9033d">source/Stations</innerdir>
+    <innerdir refid="dir_fbcb7afe1d56c2858d9d260fcc51b8ce">source/Trucks</innerdir>
+    <innerfile refid="_lunar_mining_sim_8cpp">LunarMiningSim.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/"/>
+  </compounddef>
+</doxygen>

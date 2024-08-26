@@ -1,0 +1,231 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_mining_site" kind="class" language="C++" prot="public">
+    <compoundname>MiningSite</compoundname>
+    <includes refid="_mining_site_8h" local="no">MiningSite.h</includes>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_mining_site_1ad1601a141c6d9386a295e964255d53b3" prot="protected" static="yes" mutable="no">
+        <type>const unsigned long</type>
+        <definition>const unsigned long MiningSite::MAX_RESOURCES</definition>
+        <argsstring></argsstring>
+        <name>MAX_RESOURCES</name>
+        <qualifiedname>MiningSite::MAX_RESOURCES</qualifiedname>
+        <initializer>= 50000</initializer>
+        <briefdescription>
+<para>[T] Max possible resources available for mining in tons </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="49" column="32" bodyfile="source/Sites/MiningSite.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_site_1ae9438b3416b7a2e4ecf0af44b362e925" prot="protected" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int MiningSite::MINIMUM_MINING_TIME</definition>
+        <argsstring></argsstring>
+        <name>MINIMUM_MINING_TIME</name>
+        <qualifiedname>MiningSite::MINIMUM_MINING_TIME</qualifiedname>
+        <initializer>= 60</initializer>
+        <briefdescription>
+<para>[min] Minimum mining time in minutes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="50" column="31" bodyfile="source/Sites/MiningSite.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_site_1ae0e8be6449776c31854e65e36421fbfc" prot="protected" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int MiningSite::MAXIMUM_MINING_TIME</definition>
+        <argsstring></argsstring>
+        <name>MAXIMUM_MINING_TIME</name>
+        <qualifiedname>MiningSite::MAXIMUM_MINING_TIME</qualifiedname>
+        <initializer>= 60 * 5</initializer>
+        <briefdescription>
+<para>[min] Maximum mining time in minutes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="51" column="31" bodyfile="source/Sites/MiningSite.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_mining_site_1a747c7d51f18d939cdf3dc98a7525c4fa" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningSite::_siteId</definition>
+        <argsstring></argsstring>
+        <name>_siteId</name>
+        <qualifiedname>MiningSite::_siteId</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Mining Site Id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="53" column="19" bodyfile="source/Sites/MiningSite.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_site_1a409dc0a07ab241695524289794086e9d" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningSite::_availableResource</definition>
+        <argsstring></argsstring>
+        <name>_availableResource</name>
+        <qualifiedname>MiningSite::_availableResource</qualifiedname>
+        <initializer>= <ref refid="class_mining_site_1ad1601a141c6d9386a295e964255d53b3" kindref="member">MAX_RESOURCES</ref></initializer>
+        <briefdescription>
+<para>[T] Available resources in the site in tons </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="54" column="19" bodyfile="source/Sites/MiningSite.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_site_1a2591f4e703fa0b017f7b2382de3e4eed" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MiningSite::_isBeingMined</definition>
+        <argsstring></argsstring>
+        <name>_isBeingMined</name>
+        <qualifiedname>MiningSite::_isBeingMined</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>a flag indicating if the site is currently being mined </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="55" column="10" bodyfile="source/Sites/MiningSite.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_site_1ab29a4f1eeb6c98260fbfbc2013eb965b" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MiningSite::_miningTimeLeft</definition>
+        <argsstring></argsstring>
+        <name>_miningTimeLeft</name>
+        <qualifiedname>MiningSite::_miningTimeLeft</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>how much time has passed since mining started </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="56" column="18" bodyfile="source/Sites/MiningSite.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mining_site_1af8b4d2d4b545729366c1290be9c6a97e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MiningSite::MiningSite</definition>
+        <argsstring>(unsigned long side_id)</argsstring>
+        <name>MiningSite</name>
+        <qualifiedname>MiningSite::MiningSite</qualifiedname>
+        <param>
+          <type>unsigned long</type>
+          <declname>side_id</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Mining Site object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="24" column="5" bodyfile="source/Sites/MiningSite.cpp" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_site_1a8889a3d68fb0539e2417ff1f18c78d00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MiningSite::~MiningSite</definition>
+        <argsstring>()</argsstring>
+        <name>~MiningSite</name>
+        <qualifiedname>MiningSite::~MiningSite</qualifiedname>
+        <briefdescription>
+<para>Destroy the Mining Site object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="30" column="5" bodyfile="source/Sites/MiningSite.cpp" bodystart="19" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_site_1a9470b0c0debe573d67b9e986bbb640f4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningSite::GetSiteId</definition>
+        <argsstring>() const</argsstring>
+        <name>GetSiteId</name>
+        <qualifiedname>MiningSite::GetSiteId</qualifiedname>
+        <briefdescription>
+<para>Get the Site Id. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Site Id </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="37" column="19" bodyfile="source/Sites/MiningSite.h" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_site_1af0fb6b1eb21d5a6deb5c0078ed4be9c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool MiningSite::MineSite</definition>
+        <argsstring>()</argsstring>
+        <name>MineSite</name>
+        <qualifiedname>MiningSite::MineSite</qualifiedname>
+        <briefdescription>
+<para>Assign a truck to the mining site. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="46" column="10" bodyfile="source/Sites/MiningSite.cpp" bodystart="23" bodyend="42"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_mining_site_1a01ee05b2bb0aba591f768a2197a4ae55" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MiningSite::CalcMiningTime</definition>
+        <argsstring>()</argsstring>
+        <name>CalcMiningTime</name>
+        <qualifiedname>MiningSite::CalcMiningTime</qualifiedname>
+        <briefdescription>
+<para>Compute a random mining time between 1 to 5 hours. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>time number between 60 and 300 mins </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Sites/MiningSite.h" line="63" column="26" bodyfile="source/Sites/MiningSite.cpp" bodystart="44" bodyend="49"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Sites/MiningSite.h" line="17" column="1" bodyfile="source/Sites/MiningSite.h" bodystart="18" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_mining_site_1a409dc0a07ab241695524289794086e9d" prot="protected" virt="non-virtual"><scope>MiningSite</scope><name>_availableResource</name></member>
+      <member refid="class_mining_site_1a2591f4e703fa0b017f7b2382de3e4eed" prot="protected" virt="non-virtual"><scope>MiningSite</scope><name>_isBeingMined</name></member>
+      <member refid="class_mining_site_1ab29a4f1eeb6c98260fbfbc2013eb965b" prot="protected" virt="non-virtual"><scope>MiningSite</scope><name>_miningTimeLeft</name></member>
+      <member refid="class_mining_site_1a747c7d51f18d939cdf3dc98a7525c4fa" prot="protected" virt="non-virtual"><scope>MiningSite</scope><name>_siteId</name></member>
+      <member refid="class_mining_site_1a01ee05b2bb0aba591f768a2197a4ae55" prot="protected" virt="virtual"><scope>MiningSite</scope><name>CalcMiningTime</name></member>
+      <member refid="class_mining_site_1a9470b0c0debe573d67b9e986bbb640f4" prot="public" virt="non-virtual"><scope>MiningSite</scope><name>GetSiteId</name></member>
+      <member refid="class_mining_site_1ad1601a141c6d9386a295e964255d53b3" prot="protected" virt="non-virtual"><scope>MiningSite</scope><name>MAX_RESOURCES</name></member>
+      <member refid="class_mining_site_1ae0e8be6449776c31854e65e36421fbfc" prot="protected" virt="non-virtual"><scope>MiningSite</scope><name>MAXIMUM_MINING_TIME</name></member>
+      <member refid="class_mining_site_1af0fb6b1eb21d5a6deb5c0078ed4be9c8" prot="public" virt="non-virtual"><scope>MiningSite</scope><name>MineSite</name></member>
+      <member refid="class_mining_site_1ae9438b3416b7a2e4ecf0af44b362e925" prot="protected" virt="non-virtual"><scope>MiningSite</scope><name>MINIMUM_MINING_TIME</name></member>
+      <member refid="class_mining_site_1af8b4d2d4b545729366c1290be9c6a97e" prot="public" virt="non-virtual"><scope>MiningSite</scope><name>MiningSite</name></member>
+      <member refid="class_mining_site_1a8889a3d68fb0539e2417ff1f18c78d00" prot="public" virt="non-virtual"><scope>MiningSite</scope><name>~MiningSite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

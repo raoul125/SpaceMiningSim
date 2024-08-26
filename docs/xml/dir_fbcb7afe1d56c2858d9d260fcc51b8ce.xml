@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_fbcb7afe1d56c2858d9d260fcc51b8ce" kind="dir">
+    <compoundname>source/Trucks</compoundname>
+    <innerfile refid="_mining_truck_8cpp">MiningTruck.cpp</innerfile>
+    <innerfile refid="_mining_truck_8h">MiningTruck.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Trucks/"/>
+  </compounddef>
+</doxygen>

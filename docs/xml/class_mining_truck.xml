@@ -1,0 +1,772 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_mining_truck" kind="class" language="C++" prot="public">
+    <compoundname>MiningTruck</compoundname>
+    <includes refid="_mining_truck_8h" local="no">MiningTruck.h</includes>
+    <sectiondef kind="protected-type">
+      <memberdef kind="enum" id="class_mining_truck_1a21f63f79a90575fc1198a76aab949366" prot="protected" static="no" strong="yes">
+        <type></type>
+        <name>TruckStatus_T</name>
+        <qualifiedname>MiningTruck::TruckStatus_T</qualifiedname>
+        <enumvalue id="class_mining_truck_1a21f63f79a90575fc1198a76aab949366aa5daf7f2ebbba4975d61dab1c40188c7" prot="protected">
+          <name>IDLE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mining_truck_1a21f63f79a90575fc1198a76aab949366a9b029e6b2c58a9dfbed72f694d0d7e61" prot="protected">
+          <name>MINING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mining_truck_1a21f63f79a90575fc1198a76aab949366a3412046a0234ae4be31c68ea96a314eb" prot="protected">
+          <name>TRAVELING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_mining_truck_1a21f63f79a90575fc1198a76aab949366a47a9a5e95b0b32bb9f2c74187c02bddd" prot="protected">
+          <name>UNLOADING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="168" column="5" bodyfile="source/Trucks/MiningTruck.h" bodystart="169" bodyend="174"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_mining_truck_1a687b44b2207b309c13922da172187dd5" prot="protected" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int MiningTruck::TRAVEL_TIME</definition>
+        <argsstring></argsstring>
+        <name>TRAVEL_TIME</name>
+        <qualifiedname>MiningTruck::TRAVEL_TIME</qualifiedname>
+        <initializer>= 30</initializer>
+        <briefdescription>
+<para>[min] travel time between site and unload station in minutes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="177" column="31" bodyfile="source/Trucks/MiningTruck.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1a3bcad6642e1c70d0173a64d65e39d50b" prot="protected" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int MiningTruck::UNLOAD_TIME</definition>
+        <argsstring></argsstring>
+        <name>UNLOAD_TIME</name>
+        <qualifiedname>MiningTruck::UNLOAD_TIME</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+<para>[min] time it takes to unload the payload at an unload station </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="178" column="31" bodyfile="source/Trucks/MiningTruck.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_mining_truck_1afbe956d25bd5e59c2215437065d0a5dc" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MiningTruck::_truckId</definition>
+        <argsstring></argsstring>
+        <name>_truckId</name>
+        <qualifiedname>MiningTruck::_truckId</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Truck Id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="181" column="18" bodyfile="source/Trucks/MiningTruck.h" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1acf979275e8ff2200086814310cd34154" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366" kindref="member">TruckStatus_T</ref></type>
+        <definition>TruckStatus_T MiningTruck::_status</definition>
+        <argsstring></argsstring>
+        <name>_status</name>
+        <qualifiedname>MiningTruck::_status</qualifiedname>
+        <initializer>= <ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366aa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">TruckStatus_T::IDLE</ref></initializer>
+        <briefdescription>
+<para>Truck current Status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="182" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1a24bb81514ebbcce3214d10b66daa5d53" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366" kindref="member">TruckStatus_T</ref></type>
+        <definition>TruckStatus_T MiningTruck::_previousStatus</definition>
+        <argsstring></argsstring>
+        <name>_previousStatus</name>
+        <qualifiedname>MiningTruck::_previousStatus</qualifiedname>
+        <initializer>= <ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366aa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">TruckStatus_T::IDLE</ref></initializer>
+        <briefdescription>
+<para>Truck previous Status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="183" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1a7ac63d36c3be9e416a25e761a6417e17" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_mining_site" kindref="compound">MiningSite</ref> *</type>
+        <definition>MiningSite* MiningTruck::_currentSite</definition>
+        <argsstring></argsstring>
+        <name>_currentSite</name>
+        <qualifiedname>MiningTruck::_currentSite</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>pointer to the site being mined by truck </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="184" column="16" bodyfile="source/Trucks/MiningTruck.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1a33a8f7a0ba669a3ad65aea7f32a98f28" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_unload_station" kindref="compound">UnloadStation</ref> *</type>
+        <definition>UnloadStation* MiningTruck::_currentStation</definition>
+        <argsstring></argsstring>
+        <name>_currentStation</name>
+        <qualifiedname>MiningTruck::_currentStation</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>pointer to the unload station where the truck is unloading </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="185" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1aa8270e4949b1fa2b82c39cb5c9a1439e" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int MiningTruck::_currentPayload</definition>
+        <argsstring></argsstring>
+        <name>_currentPayload</name>
+        <qualifiedname>MiningTruck::_currentPayload</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[T] Current truck payload </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="187" column="18" bodyfile="source/Trucks/MiningTruck.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1a0328d8fae7e5526dc4a5fc59550afd1c" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningTruck::_totalResourcesMined</definition>
+        <argsstring></argsstring>
+        <name>_totalResourcesMined</name>
+        <qualifiedname>MiningTruck::_totalResourcesMined</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[T] Total resources mined by the truck </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="188" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1ab5c8a31868997087096d1a6ef696d784" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningTruck::_totalResourcesDelivered</definition>
+        <argsstring></argsstring>
+        <name>_totalResourcesDelivered</name>
+        <qualifiedname>MiningTruck::_totalResourcesDelivered</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[T] Total resources delivered by the truck </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="189" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1ac9b148356df6c5070208caa0d13b106f" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningTruck::_totalIdleTime</definition>
+        <argsstring></argsstring>
+        <name>_totalIdleTime</name>
+        <qualifiedname>MiningTruck::_totalIdleTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[min] Total idle time of the truck </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="190" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1a2645d6ff4ef844a7d95745fd11cd1edf" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningTruck::_totalTravelTime</definition>
+        <argsstring></argsstring>
+        <name>_totalTravelTime</name>
+        <qualifiedname>MiningTruck::_totalTravelTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[min] Total travel time of the truck </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="191" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1adab28e1ed8b4bbb07c73642e366ee4e8" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningTruck::_totalUnloadTime</definition>
+        <argsstring></argsstring>
+        <name>_totalUnloadTime</name>
+        <qualifiedname>MiningTruck::_totalUnloadTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[min] Total unload time of the truck </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="192" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1af9d8a423c8af54c62f4324c327d5f0c5" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningTruck::_totalMiningTime</definition>
+        <argsstring></argsstring>
+        <name>_totalMiningTime</name>
+        <qualifiedname>MiningTruck::_totalMiningTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[min] Total mining time of the truck </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="193" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1a888b93a91728c0acceb220a6984b2b92" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningTruck::_travelStartTime</definition>
+        <argsstring></argsstring>
+        <name>_travelStartTime</name>
+        <qualifiedname>MiningTruck::_travelStartTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[min] Time at which the truck started traveling </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="194" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1ae074c433e0922494f7970a592eb9bead" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningTruck::_unloadStartTime</definition>
+        <argsstring></argsstring>
+        <name>_unloadStartTime</name>
+        <qualifiedname>MiningTruck::_unloadStartTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[min] Time at which the truck started unloading </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="195" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_mining_truck_1af9307ae655a324ea223b388c99121888" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningTruck::_miningStartTime</definition>
+        <argsstring></argsstring>
+        <name>_miningStartTime</name>
+        <qualifiedname>MiningTruck::_miningStartTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[min] Time at which the truck started mining </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="196" column="19" bodyfile="source/Trucks/MiningTruck.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_mining_truck_1a5c9fecb02c366ea24f65be76dac2bc77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MiningTruck::MiningTruck</definition>
+        <argsstring>(unsigned int truck_id)</argsstring>
+        <name>MiningTruck</name>
+        <qualifiedname>MiningTruck::MiningTruck</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>truck_id</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Mining Truck object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="28" column="5" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1a9279b3bf33e35ab89eeeb094d80c4f8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>MiningTruck::~MiningTruck</definition>
+        <argsstring>()</argsstring>
+        <name>~MiningTruck</name>
+        <qualifiedname>MiningTruck::~MiningTruck</qualifiedname>
+        <briefdescription>
+<para>Destroy the Mining Truck object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="34" column="13" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1aaef29bdfbfc1099096521c640e2f634c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int MiningTruck::GetTruckId</definition>
+        <argsstring>() const</argsstring>
+        <name>GetTruckId</name>
+        <qualifiedname>MiningTruck::GetTruckId</qualifiedname>
+        <briefdescription>
+<para>Get the Truck Id object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>unsigned int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="41" column="18" bodyfile="source/Trucks/MiningTruck.h" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1a468c2487073699106db0c3fa2b3c2e54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MiningTruck::AssignSite</definition>
+        <argsstring>(MiningSite &amp;site)</argsstring>
+        <name>AssignSite</name>
+        <qualifiedname>MiningTruck::AssignSite</qualifiedname>
+        <param>
+          <type><ref refid="class_mining_site" kindref="compound">MiningSite</ref> &amp;</type>
+          <declname>site</declname>
+        </param>
+        <briefdescription>
+<para>Assign site for this truck. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>site_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="51" column="10" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1a8f3e629d2439609281d14432019460ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_unload_station" kindref="compound">UnloadStation</ref> *</type>
+        <definition>UnloadStation * MiningTruck::FindBestUnloadStation</definition>
+        <argsstring>(std::vector&lt; UnloadStation * &gt; &amp;stations)</argsstring>
+        <name>FindBestUnloadStation</name>
+        <qualifiedname>MiningTruck::FindBestUnloadStation</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="class_unload_station" kindref="compound">UnloadStation</ref> * &gt; &amp;</type>
+          <declname>stations</declname>
+        </param>
+        <briefdescription>
+<para>Find the unload station with the shortest wait time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>station</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="58" column="19" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="126" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1a17ae3b9dbd041a2b04a1b526e4d8269c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string MiningTruck::GenerateStat</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateStat</name>
+        <qualifiedname>MiningTruck::GenerateStat</qualifiedname>
+        <briefdescription>
+<para>Generate and print the truck statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="64" column="17" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="177" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1ac75568f93a7345ca4e0ca86b788d5d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string MiningTruck::GeneratePerfomanceMetrics</definition>
+        <argsstring>()</argsstring>
+        <name>GeneratePerfomanceMetrics</name>
+        <qualifiedname>MiningTruck::GeneratePerfomanceMetrics</qualifiedname>
+        <briefdescription>
+<para>Calculate and return the following performance metrics: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><orderedlist>
+<listitem><para>Total Resources Delivered [T]</para>
+</listitem><listitem><para>Total Working time [min]</para>
+</listitem><listitem><para>Total Idle time. [min]</para>
+</listitem><listitem><para>Total time [min]</para>
+</listitem></orderedlist>
+</para>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="75" column="17" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="189" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1ad6f8ba7f6a1d2fa2b279b34977a68557" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string MiningTruck::GenerateEfficiencyMetrics</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateEfficiencyMetrics</name>
+        <qualifiedname>MiningTruck::GenerateEfficiencyMetrics</qualifiedname>
+        <briefdescription>
+<para>Calculate and return the following Efficiency Metrics: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><orderedlist>
+<listitem><para>Resource delivery Rate [T/mins]</para>
+</listitem><listitem><para>Truck&apos;s utilization rate [%]</para>
+</listitem><listitem><para>Truck&apos;s idle Time rate [%]</para>
+</listitem></orderedlist>
+</para>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="85" column="17" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="207" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1ad8ada5feea1a199bb7f7fc9cbb886ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningTruck::CalcTotalTime</definition>
+        <argsstring>()</argsstring>
+        <name>CalcTotalTime</name>
+        <qualifiedname>MiningTruck::CalcTotalTime</qualifiedname>
+        <briefdescription>
+<para>Duration of the simulation till now total time = total_idle + total_mining + total_travel + total_unload. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>unsigned long </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="93" column="19" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="223" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1ad093d74629ae2510546d45e698a93386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MiningTruck::CalcResourceDeliveryRate</definition>
+        <argsstring>()</argsstring>
+        <name>CalcResourceDeliveryRate</name>
+        <qualifiedname>MiningTruck::CalcResourceDeliveryRate</qualifiedname>
+        <briefdescription>
+<para>How efficient this truck is delivering resources relative to time it spends working. It reflect the average rate at which the truck delivers resources per minute of work. DeliveryRate = Total Resource delivered / Total working time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="101" column="12" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="228" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1a10e4738b815541d3bcc1e60018b38d24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MiningTruck::CalcUtilizationRate</definition>
+        <argsstring>()</argsstring>
+        <name>CalcUtilizationRate</name>
+        <qualifiedname>MiningTruck::CalcUtilizationRate</qualifiedname>
+        <briefdescription>
+<para>How much of the truck&apos;s total time is spend on productive tasks. A higher utilization rate means the truck is being use more efficently, with less idle time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Utilization rate = 100% * Total Working Time / Total Time</para>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="112" column="12" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="237" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1a1210c4431c946c7299704fe78e2c34c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MiningTruck::CalcIdleTimeRate</definition>
+        <argsstring>()</argsstring>
+        <name>CalcIdleTimeRate</name>
+        <qualifiedname>MiningTruck::CalcIdleTimeRate</qualifiedname>
+        <briefdescription>
+<para>shows the percentage of time the truck spends waiting. High queue time can indicate bottlenecks at the unload stations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Idle Rate = 100% * total idle time / total time.</para>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="122" column="12" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="246" bodyend="253"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1ab6f0ec8baa55f9d46a48a0a01f7c74bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long MiningTruck::CalcTotalWorkingTime</definition>
+        <argsstring>()</argsstring>
+        <name>CalcTotalWorkingTime</name>
+        <qualifiedname>MiningTruck::CalcTotalWorkingTime</qualifiedname>
+        <briefdescription>
+<para>Total Working time of the truck = Totoal mining time + total travel time + total unload time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>unsigned long </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="130" column="19" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1ad6c36f4a555b755cf7fa7586778379d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MiningTruck::FindAvailableSite</definition>
+        <argsstring>(std::vector&lt; MiningSite * &gt; &amp;sites, std::unordered_set&lt; unsigned int &gt; &amp;availableSites)</argsstring>
+        <name>FindAvailableSite</name>
+        <qualifiedname>MiningTruck::FindAvailableSite</qualifiedname>
+        <param>
+          <type>std::vector&lt; <ref refid="class_mining_site" kindref="compound">MiningSite</ref> * &gt; &amp;</type>
+          <declname>sites</declname>
+        </param>
+        <param>
+          <type>std::unordered_set&lt; unsigned int &gt; &amp;</type>
+          <declname>availableSites</declname>
+        </param>
+        <briefdescription>
+<para>Find the next available site. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sites</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>availableSites</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="138" column="10" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="157" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="class_mining_truck_1a69105423028459429a01c0092efc8798" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MiningTruck::Update</definition>
+        <argsstring>(unsigned long time, std::vector&lt; UnloadStation * &gt; &amp;stations, std::vector&lt; MiningSite * &gt; &amp;sites, std::unordered_set&lt; unsigned int &gt; &amp;availableSites)</argsstring>
+        <name>Update</name>
+        <qualifiedname>MiningTruck::Update</qualifiedname>
+        <param>
+          <type>unsigned long</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="class_unload_station" kindref="compound">UnloadStation</ref> * &gt; &amp;</type>
+          <declname>stations</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="class_mining_site" kindref="compound">MiningSite</ref> * &gt; &amp;</type>
+          <declname>sites</declname>
+        </param>
+        <param>
+          <type>std::unordered_set&lt; unsigned int &gt; &amp;</type>
+          <declname>availableSites</declname>
+        </param>
+        <briefdescription>
+<para>Update truck status based on current time and simulation state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function updates the truck&apos;s status (IDLE, MINING, TRAVELING, UNLOADING) based on the current simulation time and the state of the mining sites, unload stations, and available sites.</para>
+<para>The function handles the following scenarios:</para>
+<para><itemizedlist>
+<listitem><para><bold>IDLE:</bold> If the truck is idle and has a current site assigned, it transitions to MINING. If the truck is idle and is currently being processed at an unload station, it transitions to UNLOADING.</para>
+</listitem><listitem><para><bold>MINING:</bold> If the truck is mining and the current site is not depleted, it continues mining. If the current site is depleted, the truck transitions to TRAVELING, making the site available for other trucks.</para>
+</listitem><listitem><para><bold>TRAVELING:</bold> If the truck is traveling and has reached its destination (either an unload station or a mining site), it transitions to IDLE.</para>
+</listitem><listitem><para><bold>UNLOADING:</bold> If the truck is unloading and has finished unloading, it transitions to TRAVELING and searches for a new available mining site.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Elapsed time since the simulation started. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of unload stations in the simulation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sites</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of mining sites in the simulation. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>availableSites</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set of available mining sites. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Trucks/MiningTruck.h" line="163" column="10" bodyfile="source/Trucks/MiningTruck.cpp" bodystart="31" bodyend="124"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>MiningSite</label>
+        <link refid="class_mining_site"/>
+      </node>
+      <node id="1">
+        <label>MiningTruck</label>
+        <link refid="class_mining_truck"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_currentSite</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_currentStation</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>UnloadStation</label>
+        <link refid="class_unload_station"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>_currentTruck</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/Trucks/MiningTruck.h" line="21" column="1" bodyfile="source/Trucks/MiningTruck.h" bodystart="22" bodyend="197"/>
+    <listofallmembers>
+      <member refid="class_mining_truck_1aa8270e4949b1fa2b82c39cb5c9a1439e" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_currentPayload</name></member>
+      <member refid="class_mining_truck_1a7ac63d36c3be9e416a25e761a6417e17" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_currentSite</name></member>
+      <member refid="class_mining_truck_1a33a8f7a0ba669a3ad65aea7f32a98f28" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_currentStation</name></member>
+      <member refid="class_mining_truck_1af9307ae655a324ea223b388c99121888" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_miningStartTime</name></member>
+      <member refid="class_mining_truck_1a24bb81514ebbcce3214d10b66daa5d53" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_previousStatus</name></member>
+      <member refid="class_mining_truck_1acf979275e8ff2200086814310cd34154" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_status</name></member>
+      <member refid="class_mining_truck_1ac9b148356df6c5070208caa0d13b106f" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_totalIdleTime</name></member>
+      <member refid="class_mining_truck_1af9d8a423c8af54c62f4324c327d5f0c5" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_totalMiningTime</name></member>
+      <member refid="class_mining_truck_1ab5c8a31868997087096d1a6ef696d784" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_totalResourcesDelivered</name></member>
+      <member refid="class_mining_truck_1a0328d8fae7e5526dc4a5fc59550afd1c" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_totalResourcesMined</name></member>
+      <member refid="class_mining_truck_1a2645d6ff4ef844a7d95745fd11cd1edf" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_totalTravelTime</name></member>
+      <member refid="class_mining_truck_1adab28e1ed8b4bbb07c73642e366ee4e8" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_totalUnloadTime</name></member>
+      <member refid="class_mining_truck_1a888b93a91728c0acceb220a6984b2b92" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_travelStartTime</name></member>
+      <member refid="class_mining_truck_1afbe956d25bd5e59c2215437065d0a5dc" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_truckId</name></member>
+      <member refid="class_mining_truck_1ae074c433e0922494f7970a592eb9bead" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>_unloadStartTime</name></member>
+      <member refid="class_mining_truck_1a468c2487073699106db0c3fa2b3c2e54" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>AssignSite</name></member>
+      <member refid="class_mining_truck_1a1210c4431c946c7299704fe78e2c34c9" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>CalcIdleTimeRate</name></member>
+      <member refid="class_mining_truck_1ad093d74629ae2510546d45e698a93386" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>CalcResourceDeliveryRate</name></member>
+      <member refid="class_mining_truck_1ad8ada5feea1a199bb7f7fc9cbb886ae5" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>CalcTotalTime</name></member>
+      <member refid="class_mining_truck_1ab6f0ec8baa55f9d46a48a0a01f7c74bd" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>CalcTotalWorkingTime</name></member>
+      <member refid="class_mining_truck_1a10e4738b815541d3bcc1e60018b38d24" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>CalcUtilizationRate</name></member>
+      <member refid="class_mining_truck_1ad6c36f4a555b755cf7fa7586778379d3" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>FindAvailableSite</name></member>
+      <member refid="class_mining_truck_1a8f3e629d2439609281d14432019460ac" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>FindBestUnloadStation</name></member>
+      <member refid="class_mining_truck_1ad6f8ba7f6a1d2fa2b279b34977a68557" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>GenerateEfficiencyMetrics</name></member>
+      <member refid="class_mining_truck_1ac75568f93a7345ca4e0ca86b788d5d6c" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>GeneratePerfomanceMetrics</name></member>
+      <member refid="class_mining_truck_1a17ae3b9dbd041a2b04a1b526e4d8269c" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>GenerateStat</name></member>
+      <member refid="class_mining_truck_1aaef29bdfbfc1099096521c640e2f634c" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>GetTruckId</name></member>
+      <member refid="class_mining_truck_1a5c9fecb02c366ea24f65be76dac2bc77" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>MiningTruck</name></member>
+      <member refid="class_mining_truck_1a687b44b2207b309c13922da172187dd5" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>TRAVEL_TIME</name></member>
+      <member refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>TruckStatus_T</name></member>
+      <member refid="class_mining_truck_1a3bcad6642e1c70d0173a64d65e39d50b" prot="protected" virt="non-virtual"><scope>MiningTruck</scope><name>UNLOAD_TIME</name></member>
+      <member refid="class_mining_truck_1a69105423028459429a01c0092efc8798" prot="public" virt="non-virtual"><scope>MiningTruck</scope><name>Update</name></member>
+      <member refid="class_mining_truck_1a9279b3bf33e35ab89eeeb094d80c4f8d" prot="public" virt="virtual"><scope>MiningTruck</scope><name>~MiningTruck</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

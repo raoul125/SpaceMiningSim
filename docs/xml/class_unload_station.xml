@@ -1,0 +1,553 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_unload_station" kind="class" language="C++" prot="public">
+    <compoundname>UnloadStation</compoundname>
+    <includes refid="_unload_station_8h" local="no">UnloadStation.h</includes>
+    <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_unload_station_1a3497a6a3c1ddbb683ef8c8dc6a2b3549" prot="protected" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int UnloadStation::STANDARD_UNLOAD_TIME</definition>
+        <argsstring></argsstring>
+        <name>STANDARD_UNLOAD_TIME</name>
+        <qualifiedname>UnloadStation::STANDARD_UNLOAD_TIME</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+<para>[min] Standard unload time in minutes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="141" column="31" bodyfile="source/Stations/UnloadStation.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unload_station_1a6224cfbc5d59376b34826f6df9875f53" prot="protected" static="yes" mutable="no">
+        <type>const unsigned long</type>
+        <definition>const unsigned long UnloadStation::SIMULATION_DURATION</definition>
+        <argsstring></argsstring>
+        <name>SIMULATION_DURATION</name>
+        <qualifiedname>UnloadStation::SIMULATION_DURATION</qualifiedname>
+        <initializer>= 72 * 60</initializer>
+        <briefdescription>
+<para>[min] Simulation duration in minutes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="142" column="32" bodyfile="source/Stations/UnloadStation.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_unload_station_1a74d9ff8359655d8e8d93c0ead94b90d0" prot="protected" static="no" mutable="no">
+        <type>std::queue&lt; <ref refid="class_mining_truck" kindref="compound">MiningTruck</ref> * &gt;</type>
+        <definition>std::queue&lt;MiningTruck*&gt; UnloadStation::_truckQueue</definition>
+        <argsstring></argsstring>
+        <name>_truckQueue</name>
+        <qualifiedname>UnloadStation::_truckQueue</qualifiedname>
+        <briefdescription>
+<para>Queue of trucks waiting to unload at the station. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="143" column="16" bodyfile="source/Stations/UnloadStation.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unload_station_1a1bbbd572e59aa1518534f2f65f667113" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_mining_truck" kindref="compound">MiningTruck</ref> *</type>
+        <definition>MiningTruck* UnloadStation::_currentTruck</definition>
+        <argsstring></argsstring>
+        <name>_currentTruck</name>
+        <qualifiedname>UnloadStation::_currentTruck</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>Pointer to the truck currently unloading at the station. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="144" column="17" bodyfile="source/Stations/UnloadStation.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unload_station_1abff09098de1c4e053302e19f231ac2f0" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long UnloadStation::_currentTruckTime</definition>
+        <argsstring></argsstring>
+        <name>_currentTruckTime</name>
+        <qualifiedname>UnloadStation::_currentTruckTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Time left to process current truck. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="145" column="19" bodyfile="source/Stations/UnloadStation.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unload_station_1a28350bc4a2d22d2b6cc928a2780a940e" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long UnloadStation::_stationId</definition>
+        <argsstring></argsstring>
+        <name>_stationId</name>
+        <qualifiedname>UnloadStation::_stationId</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Station Id. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="146" column="19" bodyfile="source/Stations/UnloadStation.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unload_station_1a6639365d4c030b86a55f275477314864" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool UnloadStation::_isBusy</definition>
+        <argsstring></argsstring>
+        <name>_isBusy</name>
+        <qualifiedname>UnloadStation::_isBusy</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>indicated is station is currently occupied </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="147" column="10" bodyfile="source/Stations/UnloadStation.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unload_station_1a5c12b209aea7c480fefed596f307eda2" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long UnloadStation::_totalResourcesProcessed</definition>
+        <argsstring></argsstring>
+        <name>_totalResourcesProcessed</name>
+        <qualifiedname>UnloadStation::_totalResourcesProcessed</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[T] Total resources processed by the station in tons </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="148" column="19" bodyfile="source/Stations/UnloadStation.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unload_station_1aafa6a5bb4d5114324875f19033caf17b" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long UnloadStation::_totalUtilizationTime</definition>
+        <argsstring></argsstring>
+        <name>_totalUtilizationTime</name>
+        <qualifiedname>UnloadStation::_totalUtilizationTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[min] Total utilization time of the station in minutes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="149" column="19" bodyfile="source/Stations/UnloadStation.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unload_station_1a1653851adc55def79998c1735e63785c" prot="protected" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long UnloadStation::_waitTime</definition>
+        <argsstring></argsstring>
+        <name>_waitTime</name>
+        <qualifiedname>UnloadStation::_waitTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[min] Total unload wait time of the station in minutes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="150" column="19" bodyfile="source/Stations/UnloadStation.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unload_station_1aa89f14663feac6ba69a9e2b5a6c5baf5" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int UnloadStation::_numberOfTruckProcessed</definition>
+        <argsstring></argsstring>
+        <name>_numberOfTruckProcessed</name>
+        <qualifiedname>UnloadStation::_numberOfTruckProcessed</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of trucks processed at the station. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="151" column="18" bodyfile="source/Stations/UnloadStation.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_unload_station_1a2d336b632dc58c97fef12f36afb32891" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int UnloadStation::_totalQueueTime</definition>
+        <argsstring></argsstring>
+        <name>_totalQueueTime</name>
+        <qualifiedname>UnloadStation::_totalQueueTime</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[min] Total queue time of the station in minutes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="152" column="18" bodyfile="source/Stations/UnloadStation.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_unload_station_1a45db77a340c538f54647ab6b8b7c4b5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>UnloadStation::UnloadStation</definition>
+        <argsstring>(unsigned long station_id)</argsstring>
+        <name>UnloadStation</name>
+        <qualifiedname>UnloadStation::UnloadStation</qualifiedname>
+        <param>
+          <type>unsigned long</type>
+          <declname>station_id</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Unload Station object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="27" column="5" bodyfile="source/Stations/UnloadStation.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a72504d2d4ba2700bf261a2f63f99820f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>UnloadStation::~UnloadStation</definition>
+        <argsstring>()</argsstring>
+        <name>~UnloadStation</name>
+        <qualifiedname>UnloadStation::~UnloadStation</qualifiedname>
+        <briefdescription>
+<para>Destroy the Unload Station object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="33" column="13" bodyfile="source/Stations/UnloadStation.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1aa72c11409951651179d67abff2094a22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnloadStation::AcceptTrucks</definition>
+        <argsstring>(MiningTruck &amp;truck)</argsstring>
+        <name>AcceptTrucks</name>
+        <qualifiedname>UnloadStation::AcceptTrucks</qualifiedname>
+        <param>
+          <type><ref refid="class_mining_truck" kindref="compound">MiningTruck</ref> &amp;</type>
+          <declname>truck</declname>
+        </param>
+        <briefdescription>
+<para>Accept a truck at the unload station. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>truck</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="40" column="10" bodyfile="source/Stations/UnloadStation.cpp" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a6fb0c136a9a19b38a1ce53e0677fc0da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnloadStation::ProcessTruckQueue</definition>
+        <argsstring>()</argsstring>
+        <name>ProcessTruckQueue</name>
+        <qualifiedname>UnloadStation::ProcessTruckQueue</qualifiedname>
+        <briefdescription>
+<para>Process the truck queue. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="46" column="10" bodyfile="source/Stations/UnloadStation.cpp" bodystart="39" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a966af160f7ae06ec24558426287f963a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long UnloadStation::GetWaitTime</definition>
+        <argsstring>() const</argsstring>
+        <name>GetWaitTime</name>
+        <qualifiedname>UnloadStation::GetWaitTime</qualifiedname>
+        <briefdescription>
+<para>Get the wait time of this station. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>unsigned long </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="53" column="19" bodyfile="source/Stations/UnloadStation.h" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a3d42093b5b7cce6bb54641bb88d1b497" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_mining_truck" kindref="compound">MiningTruck</ref> *</type>
+        <definition>MiningTruck * UnloadStation::GetCurrentTruck</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCurrentTruck</name>
+        <qualifiedname>UnloadStation::GetCurrentTruck</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="58" column="17" bodyfile="source/Stations/UnloadStation.h" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a20c8afbc1f2d57b2639bd215adae9ab0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UnloadStation::Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <qualifiedname>UnloadStation::Update</qualifiedname>
+        <briefdescription>
+<para>Update the unload station status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>elapsed since the simulation started </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="68" column="10" bodyfile="source/Stations/UnloadStation.cpp" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a418ef8830b41a54914ab90f84e8d5fc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string UnloadStation::GenerateStat</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateStat</name>
+        <qualifiedname>UnloadStation::GenerateStat</qualifiedname>
+        <briefdescription>
+<para>Generate and print station statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="74" column="17" bodyfile="source/Stations/UnloadStation.cpp" bodystart="69" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a0bda90f3165129d17a3d3394537c9009" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string UnloadStation::GeneratePerfomanceMetrics</definition>
+        <argsstring>()</argsstring>
+        <name>GeneratePerfomanceMetrics</name>
+        <qualifiedname>UnloadStation::GeneratePerfomanceMetrics</qualifiedname>
+        <briefdescription>
+<para>Calculate and return the following performance metrics: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><orderedlist>
+<listitem><para>Total Resources Processed [T]</para>
+</listitem><listitem><para>Total Utilization Time [min]</para>
+</listitem><listitem><para>Total Queue Time [min]</para>
+</listitem><listitem><para>Number of Trucks Processed</para>
+</listitem><listitem><para>Total Idle time</para>
+</listitem></orderedlist>
+</para>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="86" column="17" bodyfile="source/Stations/UnloadStation.cpp" bodystart="81" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1adf4c965904aad96ff38d0c16af76e263" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string UnloadStation::GenerateEfficiencyMetrics</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateEfficiencyMetrics</name>
+        <qualifiedname>UnloadStation::GenerateEfficiencyMetrics</qualifiedname>
+        <briefdescription>
+<para>Calculate and return the following Efficiency Metrics: </para>
+        </briefdescription>
+        <detaileddescription>
+<para><orderedlist>
+<listitem><para>Average Truck Processing Time [min/truck]</para>
+</listitem><listitem><para>Station Utilization Rate [%]</para>
+</listitem><listitem><para>Average Queue Time [min/truck]</para>
+</listitem></orderedlist>
+</para>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="96" column="17" bodyfile="source/Stations/UnloadStation.cpp" bodystart="101" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a203c344de6dc7ae936dc669a0a8d79af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long UnloadStation::CalcTotalIdleTime</definition>
+        <argsstring>()</argsstring>
+        <name>CalcTotalIdleTime</name>
+        <qualifiedname>UnloadStation::CalcTotalIdleTime</qualifiedname>
+        <briefdescription>
+<para>Calculate total time station stay idle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>unsigned long </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="104" column="19" bodyfile="source/Stations/UnloadStation.cpp" bodystart="117" bodyend="122"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a382c191ba5bb6157e211ec1b7b38379e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double UnloadStation::CalcAverageTruckProcessingTime</definition>
+        <argsstring>()</argsstring>
+        <name>CalcAverageTruckProcessingTime</name>
+        <qualifiedname>UnloadStation::CalcAverageTruckProcessingTime</qualifiedname>
+        <briefdescription>
+<para>Calculate average truck processing time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="111" column="12" bodyfile="source/Stations/UnloadStation.cpp" bodystart="124" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a4edb88146209beaa30f0e60e6857e161" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double UnloadStation::CalcStationUtilizationRate</definition>
+        <argsstring>()</argsstring>
+        <name>CalcStationUtilizationRate</name>
+        <qualifiedname>UnloadStation::CalcStationUtilizationRate</qualifiedname>
+        <briefdescription>
+<para>Calculate station utilization rate. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="119" column="12" bodyfile="source/Stations/UnloadStation.cpp" bodystart="134" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a9ee9a534c922c5e2c09cb0eef89efafa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long UnloadStation::CalcAverageQueueTime</definition>
+        <argsstring>()</argsstring>
+        <name>CalcAverageQueueTime</name>
+        <qualifiedname>UnloadStation::CalcAverageQueueTime</qualifiedname>
+        <briefdescription>
+<para>Calculate average queue time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>unsigned long </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="127" column="19" bodyfile="source/Stations/UnloadStation.cpp" bodystart="146" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_unload_station_1a8e85baec139e5a2077efc653261a07cf" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UnloadStation::GetIsBusy</definition>
+        <argsstring>() const</argsstring>
+        <name>GetIsBusy</name>
+        <qualifiedname>UnloadStation::GetIsBusy</qualifiedname>
+        <briefdescription>
+<para>Get the unload station busy status. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true </para>
+</simplesect>
+<simplesect kind="return"><para>false </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Stations/UnloadStation.h" line="135" column="10" bodyfile="source/Stations/UnloadStation.h" bodystart="135" bodyend="138"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>MiningSite</label>
+        <link refid="class_mining_site"/>
+      </node>
+      <node id="2">
+        <label>MiningTruck</label>
+        <link refid="class_mining_truck"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>_currentSite</edgelabel>
+        </childnode>
+        <childnode refid="1" relation="usage">
+          <edgelabel>_currentStation</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>UnloadStation</label>
+        <link refid="class_unload_station"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>_currentTruck</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="source/Stations/UnloadStation.h" line="20" column="1" bodyfile="source/Stations/UnloadStation.h" bodystart="21" bodyend="153"/>
+    <listofallmembers>
+      <member refid="class_unload_station_1a1bbbd572e59aa1518534f2f65f667113" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>_currentTruck</name></member>
+      <member refid="class_unload_station_1abff09098de1c4e053302e19f231ac2f0" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>_currentTruckTime</name></member>
+      <member refid="class_unload_station_1a6639365d4c030b86a55f275477314864" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>_isBusy</name></member>
+      <member refid="class_unload_station_1aa89f14663feac6ba69a9e2b5a6c5baf5" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>_numberOfTruckProcessed</name></member>
+      <member refid="class_unload_station_1a28350bc4a2d22d2b6cc928a2780a940e" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>_stationId</name></member>
+      <member refid="class_unload_station_1a2d336b632dc58c97fef12f36afb32891" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>_totalQueueTime</name></member>
+      <member refid="class_unload_station_1a5c12b209aea7c480fefed596f307eda2" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>_totalResourcesProcessed</name></member>
+      <member refid="class_unload_station_1aafa6a5bb4d5114324875f19033caf17b" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>_totalUtilizationTime</name></member>
+      <member refid="class_unload_station_1a74d9ff8359655d8e8d93c0ead94b90d0" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>_truckQueue</name></member>
+      <member refid="class_unload_station_1a1653851adc55def79998c1735e63785c" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>_waitTime</name></member>
+      <member refid="class_unload_station_1aa72c11409951651179d67abff2094a22" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>AcceptTrucks</name></member>
+      <member refid="class_unload_station_1a9ee9a534c922c5e2c09cb0eef89efafa" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>CalcAverageQueueTime</name></member>
+      <member refid="class_unload_station_1a382c191ba5bb6157e211ec1b7b38379e" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>CalcAverageTruckProcessingTime</name></member>
+      <member refid="class_unload_station_1a4edb88146209beaa30f0e60e6857e161" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>CalcStationUtilizationRate</name></member>
+      <member refid="class_unload_station_1a203c344de6dc7ae936dc669a0a8d79af" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>CalcTotalIdleTime</name></member>
+      <member refid="class_unload_station_1adf4c965904aad96ff38d0c16af76e263" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>GenerateEfficiencyMetrics</name></member>
+      <member refid="class_unload_station_1a0bda90f3165129d17a3d3394537c9009" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>GeneratePerfomanceMetrics</name></member>
+      <member refid="class_unload_station_1a418ef8830b41a54914ab90f84e8d5fc2" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>GenerateStat</name></member>
+      <member refid="class_unload_station_1a3d42093b5b7cce6bb54641bb88d1b497" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>GetCurrentTruck</name></member>
+      <member refid="class_unload_station_1a8e85baec139e5a2077efc653261a07cf" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>GetIsBusy</name></member>
+      <member refid="class_unload_station_1a966af160f7ae06ec24558426287f963a" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>GetWaitTime</name></member>
+      <member refid="class_unload_station_1a6fb0c136a9a19b38a1ce53e0677fc0da" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>ProcessTruckQueue</name></member>
+      <member refid="class_unload_station_1a6224cfbc5d59376b34826f6df9875f53" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>SIMULATION_DURATION</name></member>
+      <member refid="class_unload_station_1a3497a6a3c1ddbb683ef8c8dc6a2b3549" prot="protected" virt="non-virtual"><scope>UnloadStation</scope><name>STANDARD_UNLOAD_TIME</name></member>
+      <member refid="class_unload_station_1a45db77a340c538f54647ab6b8b7c4b5f" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>UnloadStation</name></member>
+      <member refid="class_unload_station_1a20c8afbc1f2d57b2639bd215adae9ab0" prot="public" virt="non-virtual"><scope>UnloadStation</scope><name>Update</name></member>
+      <member refid="class_unload_station_1a72504d2d4ba2700bf261a2f63f99820f" prot="public" virt="virtual"><scope>UnloadStation</scope><name>~UnloadStation</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

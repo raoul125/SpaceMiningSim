@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_mining_truck_8h" kind="file" language="C++">
+    <compoundname>MiningTruck.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">unordered_set</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_simulator_8cpp" local="yes">source/Simulator/Simulator.cpp</includedby>
+    <includedby refid="_mining_site_8cpp" local="yes">source/Sites/MiningSite.cpp</includedby>
+    <includedby refid="_unload_station_8cpp" local="yes">source/Stations/UnloadStation.cpp</includedby>
+    <includedby refid="_mining_truck_8cpp" local="yes">source/Trucks/MiningTruck.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>source/Trucks/MiningTruck.h</label>
+        <link refid="_mining_truck_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>unordered_set</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>source/Simulator/Simulator.cpp</label>
+        <link refid="_simulator_8cpp"/>
+      </node>
+      <node id="3">
+        <label>source/Sites/MiningSite.cpp</label>
+        <link refid="_mining_site_8cpp"/>
+      </node>
+      <node id="4">
+        <label>source/Stations/UnloadStation.cpp</label>
+        <link refid="_unload_station_8cpp"/>
+      </node>
+      <node id="5">
+        <label>source/Trucks/MiningTruck.cpp</label>
+        <link refid="_mining_truck_8cpp"/>
+      </node>
+      <node id="1">
+        <label>source/Trucks/MiningTruck.h</label>
+        <link refid="_mining_truck_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_mining_truck" prot="public">MiningTruck</innerclass>
+    <briefdescription>
+<para>Class representing an Helium-3 space mining Truck. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-08-18</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2024 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SOURCE_TRUCKS_MININGTRUCK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SOURCE_TRUCKS_MININGTRUCK_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;unordered_set&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Forward<sp/>declaration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mining_site" kindref="compound">MiningSite</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_unload_station" kindref="compound">UnloadStation</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_mining_truck" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mining_truck" kindref="compound">MiningTruck</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mining_truck_1a5c9fecb02c366ea24f65be76dac2bc77" kindref="member">MiningTruck</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>truck_id);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1a9279b3bf33e35ab89eeeb094d80c4f8d" kindref="member">~MiningTruck</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="class_mining_truck_1aaef29bdfbfc1099096521c640e2f634c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1aaef29bdfbfc1099096521c640e2f634c" kindref="member">GetTruckId</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="42"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1afbe956d25bd5e59c2215437065d0a5dc" kindref="member">_truckId</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1a468c2487073699106db0c3fa2b3c2e54" kindref="member">AssignSite</ref>(<ref refid="class_mining_site" kindref="compound">MiningSite</ref><sp/>&amp;site);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_unload_station" kindref="compound">UnloadStation</ref><sp/>*<ref refid="class_mining_truck_1a8f3e629d2439609281d14432019460ac" kindref="member">FindBestUnloadStation</ref>(std::vector&lt;UnloadStation<sp/>*&gt;<sp/>&amp;stations);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_mining_truck_1a17ae3b9dbd041a2b04a1b526e4d8269c" kindref="member">GenerateStat</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_mining_truck_1ac75568f93a7345ca4e0ca86b788d5d6c" kindref="member">GeneratePerfomanceMetrics</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_mining_truck_1ad6f8ba7f6a1d2fa2b279b34977a68557" kindref="member">GenerateEfficiencyMetrics</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1ad8ada5feea1a199bb7f7fc9cbb886ae5" kindref="member">CalcTotalTime</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1ad093d74629ae2510546d45e698a93386" kindref="member">CalcResourceDeliveryRate</ref>();</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1a10e4738b815541d3bcc1e60018b38d24" kindref="member">CalcUtilizationRate</ref>();</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1a1210c4431c946c7299704fe78e2c34c9" kindref="member">CalcIdleTimeRate</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1ab6f0ec8baa55f9d46a48a0a01f7c74bd" kindref="member">CalcTotalWorkingTime</ref>();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1ad6c36f4a555b755cf7fa7586778379d3" kindref="member">FindAvailableSite</ref>(std::vector&lt;MiningSite<sp/>*&gt;<sp/>&amp;sites,<sp/>std::unordered_set&lt;unsigned<sp/>int&gt;<sp/>&amp;availableSites);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1a69105423028459429a01c0092efc8798" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>time,<sp/>std::vector&lt;UnloadStation<sp/>*&gt;<sp/>&amp;stations,<sp/>std::vector&lt;MiningSite<sp/>*&gt;<sp/>&amp;sites,</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::unordered_set&lt;unsigned<sp/>int&gt;<sp/>&amp;availableSites);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>List<sp/>of<sp/>possible<sp/>truck<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum<sp/>class</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366" kindref="member">TruckStatus_T</ref></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366aa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">IDLE</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366a9b029e6b2c58a9dfbed72f694d0d7e61" kindref="member">MINING</ref>,</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366a3412046a0234ae4be31c68ea96a314eb" kindref="member">TRAVELING</ref>,</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366a47a9a5e95b0b32bb9f2c74187c02bddd" kindref="member">UNLOADING</ref></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constants</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177" refid="class_mining_truck_1a687b44b2207b309c13922da172187dd5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1a687b44b2207b309c13922da172187dd5" kindref="member">TRAVEL_TIME</ref><sp/>=<sp/>30;<sp/><sp/></highlight></codeline>
+<codeline lineno="178" refid="class_mining_truck_1a3bcad6642e1c70d0173a64d65e39d50b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1a3bcad6642e1c70d0173a64d65e39d50b" kindref="member">UNLOAD_TIME</ref><sp/>=<sp/>5;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Members</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="class_mining_truck_1afbe956d25bd5e59c2215437065d0a5dc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1afbe956d25bd5e59c2215437065d0a5dc" kindref="member">_truckId</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="182" refid="class_mining_truck_1acf979275e8ff2200086814310cd34154" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366" kindref="member">TruckStatus_T</ref><sp/><ref refid="class_mining_truck_1acf979275e8ff2200086814310cd34154" kindref="member">_status</ref><sp/>=<sp/><ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366aa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">TruckStatus_T::IDLE</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="183" refid="class_mining_truck_1a24bb81514ebbcce3214d10b66daa5d53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366" kindref="member">TruckStatus_T</ref><sp/><ref refid="class_mining_truck_1a24bb81514ebbcce3214d10b66daa5d53" kindref="member">_previousStatus</ref><sp/>=<sp/><ref refid="class_mining_truck_1a21f63f79a90575fc1198a76aab949366aa5daf7f2ebbba4975d61dab1c40188c7" kindref="member">TruckStatus_T::IDLE</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="class_mining_truck_1a7ac63d36c3be9e416a25e761a6417e17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mining_site" kindref="compound">MiningSite</ref><sp/>*<ref refid="class_mining_truck_1a7ac63d36c3be9e416a25e761a6417e17" kindref="member">_currentSite</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="185" refid="class_mining_truck_1a33a8f7a0ba669a3ad65aea7f32a98f28" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_unload_station" kindref="compound">UnloadStation</ref><sp/>*<ref refid="class_mining_truck_1a33a8f7a0ba669a3ad65aea7f32a98f28" kindref="member">_currentStation</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/><sp/></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="class_mining_truck_1aa8270e4949b1fa2b82c39cb5c9a1439e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1aa8270e4949b1fa2b82c39cb5c9a1439e" kindref="member">_currentPayload</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="188" refid="class_mining_truck_1a0328d8fae7e5526dc4a5fc59550afd1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1a0328d8fae7e5526dc4a5fc59550afd1c" kindref="member">_totalResourcesMined</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="189" refid="class_mining_truck_1ab5c8a31868997087096d1a6ef696d784" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1ab5c8a31868997087096d1a6ef696d784" kindref="member">_totalResourcesDelivered</ref><sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
+<codeline lineno="190" refid="class_mining_truck_1ac9b148356df6c5070208caa0d13b106f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1ac9b148356df6c5070208caa0d13b106f" kindref="member">_totalIdleTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="191" refid="class_mining_truck_1a2645d6ff4ef844a7d95745fd11cd1edf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1a2645d6ff4ef844a7d95745fd11cd1edf" kindref="member">_totalTravelTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192" refid="class_mining_truck_1adab28e1ed8b4bbb07c73642e366ee4e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1adab28e1ed8b4bbb07c73642e366ee4e8" kindref="member">_totalUnloadTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="193" refid="class_mining_truck_1af9d8a423c8af54c62f4324c327d5f0c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1af9d8a423c8af54c62f4324c327d5f0c5" kindref="member">_totalMiningTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194" refid="class_mining_truck_1a888b93a91728c0acceb220a6984b2b92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1a888b93a91728c0acceb220a6984b2b92" kindref="member">_travelStartTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="195" refid="class_mining_truck_1ae074c433e0922494f7970a592eb9bead" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1ae074c433e0922494f7970a592eb9bead" kindref="member">_unloadStartTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="196" refid="class_mining_truck_1af9307ae655a324ea223b388c99121888" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_mining_truck_1af9307ae655a324ea223b388c99121888" kindref="member">_miningStartTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>SOURCE_TRUCKS_MININGTRUCK_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="source/Trucks/MiningTruck.h"/>
+  </compounddef>
+</doxygen>

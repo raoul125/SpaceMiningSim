@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="_unload_station_8h" kind="file" language="C++">
+    <compoundname>UnloadStation.h</compoundname>
+    <includes local="no">queue</includes>
+    <includes local="no">string</includes>
+    <includedby refid="_simulator_8cpp" local="yes">source/Simulator/Simulator.cpp</includedby>
+    <includedby refid="_unload_station_8cpp" local="yes">source/Stations/UnloadStation.cpp</includedby>
+    <includedby refid="_mining_truck_8cpp" local="yes">source/Trucks/MiningTruck.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>source/Stations/UnloadStation.h</label>
+        <link refid="_unload_station_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>queue</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>source/Simulator/Simulator.cpp</label>
+        <link refid="_simulator_8cpp"/>
+      </node>
+      <node id="3">
+        <label>source/Stations/UnloadStation.cpp</label>
+        <link refid="_unload_station_8cpp"/>
+      </node>
+      <node id="1">
+        <label>source/Stations/UnloadStation.h</label>
+        <link refid="_unload_station_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>source/Trucks/MiningTruck.cpp</label>
+        <link refid="_mining_truck_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_unload_station" prot="public">UnloadStation</innerclass>
+    <briefdescription>
+<para>Class Representing an Unload Station. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2024-08-18</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2024 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SOURCE_STATIONS_UNLOADSTATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SOURCE_STATIONS_UNLOADSTATION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Forward<sp/>declaration</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_mining_truck" kindref="compound">MiningTruck</ref>;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="class_unload_station" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_unload_station" kindref="compound">UnloadStation</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_unload_station_1a45db77a340c538f54647ab6b8b7c4b5f" kindref="member">UnloadStation</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>station_id);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a72504d2d4ba2700bf261a2f63f99820f" kindref="member">~UnloadStation</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1aa72c11409951651179d67abff2094a22" kindref="member">AcceptTrucks</ref>(<ref refid="class_mining_truck" kindref="compound">MiningTruck</ref>&amp;<sp/>truck);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a6fb0c136a9a19b38a1ce53e0677fc0da" kindref="member">ProcessTruckQueue</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="class_unload_station_1a966af160f7ae06ec24558426287f963a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a966af160f7ae06ec24558426287f963a" kindref="member">GetWaitTime</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="54"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a1653851adc55def79998c1735e63785c" kindref="member">_waitTime</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="class_unload_station_1a3d42093b5b7cce6bb54641bb88d1b497" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mining_truck" kindref="compound">MiningTruck</ref>*<sp/><ref refid="class_unload_station_1a3d42093b5b7cce6bb54641bb88d1b497" kindref="member">GetCurrentTruck</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="59"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a1bbbd572e59aa1518534f2f65f667113" kindref="member">_currentTruck</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a20c8afbc1f2d57b2639bd215adae9ab0" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_unload_station_1a418ef8830b41a54914ab90f84e8d5fc2" kindref="member">GenerateStat</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_unload_station_1a0bda90f3165129d17a3d3394537c9009" kindref="member">GeneratePerfomanceMetrics</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_unload_station_1adf4c965904aad96ff38d0c16af76e263" kindref="member">GenerateEfficiencyMetrics</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a203c344de6dc7ae936dc669a0a8d79af" kindref="member">CalcTotalIdleTime</ref>();</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a382c191ba5bb6157e211ec1b7b38379e" kindref="member">CalcAverageTruckProcessingTime</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a4edb88146209beaa30f0e60e6857e161" kindref="member">CalcStationUtilizationRate</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a9ee9a534c922c5e2c09cb0eef89efafa" kindref="member">CalcAverageQueueTime</ref>();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="class_unload_station_1a8e85baec139e5a2077efc653261a07cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a8e85baec139e5a2077efc653261a07cf" kindref="member">GetIsBusy</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="136"><highlight class="keyword"><sp/><sp/><sp/><sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a6639365d4c030b86a55f275477314864" kindref="member">_isBusy</ref>;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="141" refid="class_unload_station_1a3497a6a3c1ddbb683ef8c8dc6a2b3549" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a3497a6a3c1ddbb683ef8c8dc6a2b3549" kindref="member">STANDARD_UNLOAD_TIME</ref><sp/>=<sp/>5;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142" refid="class_unload_station_1a6224cfbc5d59376b34826f6df9875f53" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a6224cfbc5d59376b34826f6df9875f53" kindref="member">SIMULATION_DURATION</ref><sp/>=<sp/>72<sp/>*<sp/>60;<sp/><sp/></highlight></codeline>
+<codeline lineno="143" refid="class_unload_station_1a74d9ff8359655d8e8d93c0ead94b90d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::queue&lt;MiningTruck*&gt;<sp/><ref refid="class_unload_station_1a74d9ff8359655d8e8d93c0ead94b90d0" kindref="member">_truckQueue</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144" refid="class_unload_station_1a1bbbd572e59aa1518534f2f65f667113" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_mining_truck" kindref="compound">MiningTruck</ref>*<sp/><ref refid="class_unload_station_1a1bbbd572e59aa1518534f2f65f667113" kindref="member">_currentTruck</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145" refid="class_unload_station_1abff09098de1c4e053302e19f231ac2f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1abff09098de1c4e053302e19f231ac2f0" kindref="member">_currentTruckTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146" refid="class_unload_station_1a28350bc4a2d22d2b6cc928a2780a940e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a28350bc4a2d22d2b6cc928a2780a940e" kindref="member">_stationId</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="147" refid="class_unload_station_1a6639365d4c030b86a55f275477314864" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a6639365d4c030b86a55f275477314864" kindref="member">_isBusy</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="148" refid="class_unload_station_1a5c12b209aea7c480fefed596f307eda2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a5c12b209aea7c480fefed596f307eda2" kindref="member">_totalResourcesProcessed</ref><sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
+<codeline lineno="149" refid="class_unload_station_1aafa6a5bb4d5114324875f19033caf17b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1aafa6a5bb4d5114324875f19033caf17b" kindref="member">_totalUtilizationTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150" refid="class_unload_station_1a1653851adc55def79998c1735e63785c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a1653851adc55def79998c1735e63785c" kindref="member">_waitTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151" refid="class_unload_station_1aa89f14663feac6ba69a9e2b5a6c5baf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1aa89f14663feac6ba69a9e2b5a6c5baf5" kindref="member">_numberOfTruckProcessed</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="152" refid="class_unload_station_1a2d336b632dc58c97fef12f36afb32891" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_unload_station_1a2d336b632dc58c97fef12f36afb32891" kindref="member">_totalQueueTime</ref><sp/>=<sp/>0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/><sp/></highlight><highlight class="comment">//<sp/>SOURCE_STATIONS_UNLOADSTATION_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="source/Stations/UnloadStation.h"/>
+  </compounddef>
+</doxygen>

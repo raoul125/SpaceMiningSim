@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="class_simulator" kind="class" language="C++" prot="public">
+    <compoundname>Simulator</compoundname>
+    <includes refid="_simulator_8h" local="no">Simulator.h</includes>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_simulator_1a9ae142df4bad3d7ff48c5d29d591c84f" prot="private" static="yes" mutable="no">
+        <type>const unsigned long</type>
+        <definition>const unsigned long Simulator::SIMULATION_DURATION</definition>
+        <argsstring></argsstring>
+        <name>SIMULATION_DURATION</name>
+        <qualifiedname>Simulator::SIMULATION_DURATION</qualifiedname>
+        <initializer>= 72 * 60</initializer>
+        <briefdescription>
+<para>[min] Simulation duration in minutes </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="66" column="32" bodyfile="source/Simulator/Simulator.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_simulator_1a6f0510b5699ebf090c9eb86108450198" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Simulator::_time</definition>
+        <argsstring></argsstring>
+        <name>_time</name>
+        <qualifiedname>Simulator::_time</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>[min] current simulation time </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="67" column="18" bodyfile="source/Simulator/Simulator.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a5f58a69cb1346201f0eff5cd837919ed" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_mining_truck" kindref="compound">MiningTruck</ref> * &gt;</type>
+        <definition>std::vector&lt;MiningTruck*&gt; Simulator::_trucks</definition>
+        <argsstring></argsstring>
+        <name>_trucks</name>
+        <qualifiedname>Simulator::_trucks</qualifiedname>
+        <briefdescription>
+<para>List of trucks. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="68" column="17" bodyfile="source/Simulator/Simulator.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1aa29be7e3bb6f490e236f473d4d7c2bab" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_mining_site" kindref="compound">MiningSite</ref> * &gt;</type>
+        <definition>std::vector&lt;MiningSite*&gt; Simulator::_sites</definition>
+        <argsstring></argsstring>
+        <name>_sites</name>
+        <qualifiedname>Simulator::_sites</qualifiedname>
+        <briefdescription>
+<para>List of mining sites. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="69" column="17" bodyfile="source/Simulator/Simulator.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1abbe48c2c2e27eebbc343f8775815418b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="class_unload_station" kindref="compound">UnloadStation</ref> * &gt;</type>
+        <definition>std::vector&lt;UnloadStation*&gt; Simulator::_unloadStations</definition>
+        <argsstring></argsstring>
+        <name>_unloadStations</name>
+        <qualifiedname>Simulator::_unloadStations</qualifiedname>
+        <briefdescription>
+<para>List of unload stations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="70" column="17" bodyfile="source/Simulator/Simulator.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1ab93e2794b7aaa621f08c61c907822b1e" prot="private" static="no" mutable="no">
+        <type>std::unordered_set&lt; unsigned int &gt;</type>
+        <definition>std::unordered_set&lt;unsigned int&gt; Simulator::_availableSite</definition>
+        <argsstring></argsstring>
+        <name>_availableSite</name>
+        <qualifiedname>Simulator::_availableSite</qualifiedname>
+        <briefdescription>
+<para>List of available mining sites. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="71" column="24" bodyfile="source/Simulator/Simulator.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1a1ab29403b4f9a2af59d0ab201f85201f" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Simulator::_truckCount</definition>
+        <argsstring></argsstring>
+        <name>_truckCount</name>
+        <qualifiedname>Simulator::_truckCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of trucks in the simulations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="72" column="18" bodyfile="source/Simulator/Simulator.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1ac70c591d78ac77ed054eda41911c4269" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Simulator::_miningSiteCount</definition>
+        <argsstring></argsstring>
+        <name>_miningSiteCount</name>
+        <qualifiedname>Simulator::_miningSiteCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of mining sites in the simulations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="73" column="18" bodyfile="source/Simulator/Simulator.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_simulator_1ad42d45ccd1e59b4781cb4d757cf5a856" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Simulator::_unloadStationCount</definition>
+        <argsstring></argsstring>
+        <name>_unloadStationCount</name>
+        <qualifiedname>Simulator::_unloadStationCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of unload Stations in the sumulation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="74" column="18" bodyfile="source/Simulator/Simulator.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_simulator_1a031573bfcfe2e0f5c9539bcc1c7fc5d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Simulator::Simulator</definition>
+        <argsstring>()</argsstring>
+        <name>Simulator</name>
+        <qualifiedname>Simulator::Simulator</qualifiedname>
+        <briefdescription>
+<para>Construct a new <ref refid="class_simulator" kindref="compound">Simulator</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="30" column="5" bodyfile="source/Simulator/Simulator.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a0f49aa04f42060a785adf77346b9de9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Simulator::~Simulator</definition>
+        <argsstring>()</argsstring>
+        <name>~Simulator</name>
+        <qualifiedname>Simulator::~Simulator</qualifiedname>
+        <briefdescription>
+<para>Destroy the <ref refid="class_simulator" kindref="compound">Simulator</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="36" column="5" bodyfile="source/Simulator/Simulator.cpp" bodystart="24" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a11a2893fc56d91f63d1e6592caed0045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::Initialize</definition>
+        <argsstring>(unsigned int num_trucks, unsigned int num_sites, unsigned int num_stations)</argsstring>
+        <name>Initialize</name>
+        <qualifiedname>Simulator::Initialize</qualifiedname>
+        <param>
+          <type>unsigned int</type>
+          <declname>num_trucks</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>num_sites</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>num_stations</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the simulation with the specified number of trucks, mining sites, and unload stations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>num_trucks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_sites</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>num_stations</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="45" column="10" bodyfile="source/Simulator/Simulator.cpp" bodystart="144" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a219458eee644d9ead3cd646199d09ad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::DispatchTrucks</definition>
+        <argsstring>()</argsstring>
+        <name>DispatchTrucks</name>
+        <qualifiedname>Simulator::DispatchTrucks</qualifiedname>
+        <briefdescription>
+<para>Assign trucks to available mining sites. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="51" column="10" bodyfile="source/Simulator/Simulator.cpp" bodystart="175" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a27e7045e7aa4e29e9d2003aaa09c8326" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <qualifiedname>Simulator::Run</qualifiedname>
+        <briefdescription>
+<para>Execute the simulation loop, advancing time and updating all components. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="57" column="10" bodyfile="source/Simulator/Simulator.cpp" bodystart="63" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_simulator_1a5a7b80d938e5f12f263eef9d24db39eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Simulator::GenerateStat</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateStat</name>
+        <qualifiedname>Simulator::GenerateStat</qualifiedname>
+        <briefdescription>
+<para>Generate and print the simulation statistics. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="source/Simulator/Simulator.h" line="63" column="10" bodyfile="source/Simulator/Simulator.cpp" bodystart="96" bodyend="142"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Simulator/Simulator.h" line="23" column="1" bodyfile="source/Simulator/Simulator.h" bodystart="24" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_simulator_1ab93e2794b7aaa621f08c61c907822b1e" prot="private" virt="non-virtual"><scope>Simulator</scope><name>_availableSite</name></member>
+      <member refid="class_simulator_1ac70c591d78ac77ed054eda41911c4269" prot="private" virt="non-virtual"><scope>Simulator</scope><name>_miningSiteCount</name></member>
+      <member refid="class_simulator_1aa29be7e3bb6f490e236f473d4d7c2bab" prot="private" virt="non-virtual"><scope>Simulator</scope><name>_sites</name></member>
+      <member refid="class_simulator_1a6f0510b5699ebf090c9eb86108450198" prot="private" virt="non-virtual"><scope>Simulator</scope><name>_time</name></member>
+      <member refid="class_simulator_1a1ab29403b4f9a2af59d0ab201f85201f" prot="private" virt="non-virtual"><scope>Simulator</scope><name>_truckCount</name></member>
+      <member refid="class_simulator_1a5f58a69cb1346201f0eff5cd837919ed" prot="private" virt="non-virtual"><scope>Simulator</scope><name>_trucks</name></member>
+      <member refid="class_simulator_1ad42d45ccd1e59b4781cb4d757cf5a856" prot="private" virt="non-virtual"><scope>Simulator</scope><name>_unloadStationCount</name></member>
+      <member refid="class_simulator_1abbe48c2c2e27eebbc343f8775815418b" prot="private" virt="non-virtual"><scope>Simulator</scope><name>_unloadStations</name></member>
+      <member refid="class_simulator_1a219458eee644d9ead3cd646199d09ad9" prot="public" virt="non-virtual"><scope>Simulator</scope><name>DispatchTrucks</name></member>
+      <member refid="class_simulator_1a5a7b80d938e5f12f263eef9d24db39eb" prot="public" virt="non-virtual"><scope>Simulator</scope><name>GenerateStat</name></member>
+      <member refid="class_simulator_1a11a2893fc56d91f63d1e6592caed0045" prot="public" virt="non-virtual"><scope>Simulator</scope><name>Initialize</name></member>
+      <member refid="class_simulator_1a27e7045e7aa4e29e9d2003aaa09c8326" prot="public" virt="non-virtual"><scope>Simulator</scope><name>Run</name></member>
+      <member refid="class_simulator_1a9ae142df4bad3d7ff48c5d29d591c84f" prot="private" virt="non-virtual"><scope>Simulator</scope><name>SIMULATION_DURATION</name></member>
+      <member refid="class_simulator_1a031573bfcfe2e0f5c9539bcc1c7fc5d9" prot="public" virt="non-virtual"><scope>Simulator</scope><name>Simulator</name></member>
+      <member refid="class_simulator_1a0f49aa04f42060a785adf77346b9de9f" prot="public" virt="non-virtual"><scope>Simulator</scope><name>~Simulator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_4a6686df91811a5ddcd8aaae8bb9033d" kind="dir">
+    <compoundname>source/Stations</compoundname>
+    <innerfile refid="_unload_station_8cpp">UnloadStation.cpp</innerfile>
+    <innerfile refid="_unload_station_8h">UnloadStation.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Stations/"/>
+  </compounddef>
+</doxygen>

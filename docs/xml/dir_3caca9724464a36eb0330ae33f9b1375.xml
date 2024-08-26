@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.12.0" xml:lang="en-US">
+  <compounddef id="dir_3caca9724464a36eb0330ae33f9b1375" kind="dir">
+    <compoundname>source/Sites</compoundname>
+    <innerfile refid="_mining_site_8cpp">MiningSite.cpp</innerfile>
+    <innerfile refid="_mining_site_8h">MiningSite.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/Sites/"/>
+  </compounddef>
+</doxygen>
