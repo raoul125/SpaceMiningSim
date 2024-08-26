@@ -86,5 +86,7 @@ The simulation operates in discrete time steps, with each step representing a un
 
 - **Visualization:** Create a visual representation of the simulation, showing the movement of trucks, resource extraction, and station activity.
 
-- **Unit Tests:** Implement a comprehensive suite of unit tests to ensure the correctness and robustness of the simulation code.
+- **Unit Tests:** Implement a comprehensive suite of unit tests to ensure the correctness and robustness of the simulation code using Google Test Framework.
+
+- **Code Coverage** Utilize a tool like VectorCast or LDRA to ensure MC/DC code coverage
 
