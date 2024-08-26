@@ -138,6 +138,13 @@ UnloadStation* MiningTruck::FindBestUnloadStation(std::vector<UnloadStation*>& s
 
     for (unsigned int ii = 1; ii < stations.size(); ii++)
     {
+        if (false == stations[ii]->GetIsBusy())
+        {
+            station_with_shortest_wait_time = stations[ii];
+            break;
+        }
+        
+        // find unload station with shortest wait time
         if (stations[ii]->GetWaitTime() < station_with_shortest_wait_time->GetWaitTime())
         {
             station_with_shortest_wait_time = stations[ii];
@@ -171,12 +178,10 @@ std::string MiningTruck::GenerateStat()
 {
     std::string result = "";
 
-    result += "Truck [" + std::to_string(_truckId) + "] Statistics:\n";
+    result += "Truck [" + std::to_string(_truckId+1) + "] Statistics:\n";
 
     result += GeneratePerfomanceMetrics();
     result += GenerateEfficiencyMetrics();
-
-    //std::cout << result << std::endl;
 
     return result;
 }

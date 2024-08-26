@@ -45,8 +45,7 @@ int main(int argc, char* argv[])
     lunar_sim.Run();
 
     // ask user to press any key to continue
-    std::cout << "Simulation Complete. Please press any key to exit..." << std::endl;
-    std::cin.get();
+    std::cout << "Simulation Complete. Please see statistic in Output/ directory" << std::endl;
 
     return 0;
 }

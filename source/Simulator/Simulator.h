@@ -64,7 +64,6 @@ class Simulator
 
    private:
     static const unsigned long SIMULATION_DURATION = 72 * 60;  //!< [min] Simulation duration in minutes
-    static const unsigned int STATISTIC_INTERVAL = 60;         //!< [min] Statistic interval in minutes
     unsigned int _time = 0;                                    //!< [min] current simulation time
     std::vector<MiningTruck*> _trucks;                         //!< List of trucks
     std::vector<MiningSite*> _sites;                           //!< List of mining sites
@@ -73,11 +72,6 @@ class Simulator
     unsigned int _truckCount = 0;                              //!< Number of trucks in the simulations
     unsigned int _miningSiteCount = 0;                         //!< Number of mining sites in the simulations
     unsigned int _unloadStationCount = 0;                      //!< Number of unload Stations in the sumulation
-    unsigned long _totalResourceMined = 0;                     //!< Total resources mined during by all Trucks
-    unsigned long _totalIdleTime = 0;                          //!< Total idle time of all trucks
-    unsigned long _totalTravelTime = 0;                        //!< Total travel time of all trucks
-    unsigned long _totalUnloadTime = 0;                        //!< Total unload time of all trucks
-    unsigned long _totalMiningTime = 0;                        //!< Total mining time of all trucks
 };
 
 #endif  // SOURCE_SIMULATOR_HSIMULATOR_H

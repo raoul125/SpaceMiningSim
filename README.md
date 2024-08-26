@@ -60,6 +60,7 @@ The simulation operates in discrete time steps, with each step representing a un
 - **Linux:**
     - CMake
     - g++ compiler
+    - gdb
 - **Windows:**
     - CMake
     - Visual Studio (with C++ compiler)
@@ -77,11 +78,13 @@ The simulation operates in discrete time steps, with each step representing a un
 1. **Run the simulation with the desired parameters**
     ```bash
     ./run.sh <numtrucks> <numSites> <numStations>
-    * Replace <numtrucks>, <numSites>, and <numStations> with the desired number of trucks, mining sites, and unload stations, respectively.
+- Replace <numtrucks>, <numSites>, and <numStations> with the desired number of trucks, mining sites, and unload stations, respectively.
 
 ## Future Enhancements
 
 - **Resource Management:** Implement a more sophisticated resource management system, including resource storage and consumption.
-- **Dynamic Site Allocation:** Allow trucks to dynamically choose mining sites based on factors like resource availability and distance.
-- **Advanced Station Logic:** Implement more complex station logic, such as multiple processing stages or priority queues.
+
 - **Visualization:** Create a visual representation of the simulation, showing the movement of trucks, resource extraction, and station activity.
+
+- **Unit Tests:** Implement a comprehensive suite of unit tests to ensure the correctness and robustness of the simulation code.
+

@@ -1,0 +1,138 @@
+Lunar Mining Simulation Statistics:
+    Simulation Duration: 4320 min
+    Number of Trucks: 12
+    Number of Mining Sites: 100
+    Number of Unload Stations: 5
+
+Truck [1] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 15 T
+        Total Working Time: 4212 min
+        Total Idle Time: 108 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.003561 T/min
+        Truck Utilization Rate: 97.500000 %
+        Truck Idle Time Rate: 2.500000 %
+
+Truck [2] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 17 T
+        Total Working Time: 4187 min
+        Total Idle Time: 133 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.004060 T/min
+        Truck Utilization Rate: 96.921296 %
+        Truck Idle Time Rate: 3.078704 %
+
+Truck [3] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 14 T
+        Total Working Time: 4206 min
+        Total Idle Time: 114 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.003329 T/min
+        Truck Utilization Rate: 97.361111 %
+        Truck Idle Time Rate: 2.638889 %
+
+Truck [4] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 16 T
+        Total Working Time: 4189 min
+        Total Idle Time: 131 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.003820 T/min
+        Truck Utilization Rate: 96.967593 %
+        Truck Idle Time Rate: 3.032407 %
+
+Truck [5] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 13 T
+        Total Working Time: 4211 min
+        Total Idle Time: 109 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.003087 T/min
+        Truck Utilization Rate: 97.476852 %
+        Truck Idle Time Rate: 2.523148 %
+
+Truck [6] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 16 T
+        Total Working Time: 4209 min
+        Total Idle Time: 111 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.003801 T/min
+        Truck Utilization Rate: 97.430556 %
+        Truck Idle Time Rate: 2.569444 %
+
+Truck [7] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 14 T
+        Total Working Time: 4211 min
+        Total Idle Time: 109 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.003325 T/min
+        Truck Utilization Rate: 97.476852 %
+        Truck Idle Time Rate: 2.523148 %
+
+Truck [8] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 14 T
+        Total Working Time: 4221 min
+        Total Idle Time: 99 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.003317 T/min
+        Truck Utilization Rate: 97.708333 %
+        Truck Idle Time Rate: 2.291667 %
+
+Truck [9] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 15 T
+        Total Working Time: 4215 min
+        Total Idle Time: 105 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.003559 T/min
+        Truck Utilization Rate: 97.569444 %
+        Truck Idle Time Rate: 2.430556 %
+
+Truck [10] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 15 T
+        Total Working Time: 4205 min
+        Total Idle Time: 115 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.003567 T/min
+        Truck Utilization Rate: 97.337963 %
+        Truck Idle Time Rate: 2.662037 %
+
+Truck [11] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 14 T
+        Total Working Time: 4213 min
+        Total Idle Time: 107 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.003323 T/min
+        Truck Utilization Rate: 97.523148 %
+        Truck Idle Time Rate: 2.476852 %
+
+Truck [12] Statistics:
+    Performance Metrics:
+        Total Resources Delivered: 16 T
+        Total Working Time: 4192 min
+        Total Idle Time: 128 min
+        Total Time: 4320 min
+    Efficiency Metrics:
+        Resource Delivery Rate: 0.003817 T/min
+        Truck Utilization Rate: 97.037037 %
+        Truck Idle Time Rate: 2.962963 %
+

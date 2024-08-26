@@ -10,6 +10,7 @@
 
 #include "./Simulator.h"
 
+#include <fstream>
 #include <iostream>
 
 #include "../Sites/MiningSite.h"        // MiningSite class
@@ -89,9 +90,54 @@ void Simulator::Run()
         _time++;
     }
 
+    GenerateStat();
+}
+
+void Simulator::GenerateStat()
+{
+    std::string truck_stat = "";
+    // Add simulation infor
+    truck_stat += "Lunar Mining Simulation Statistics:\n";
+    truck_stat += "    Simulation Duration: " + std::to_string(SIMULATION_DURATION) + " min\n";
+    truck_stat += "    Number of Trucks: " + std::to_string(_truckCount) + "\n";
+    truck_stat += "    Number of Mining Sites: " + std::to_string(_miningSiteCount) + "\n";
+    truck_stat += "    Number of Unload Stations: " + std::to_string(_unloadStationCount) + "\n";
+    truck_stat += "\n";
+
+    // Same headers
+    std::string station_stat = truck_stat;
+
+    // Add truck statistics
     for (unsigned int ii = 0; ii < _truckCount; ii++)
     {
-        std::cout << _trucks[ii]->GenerateStat() << std::endl;
+        truck_stat += _trucks[ii]->GenerateStat();
+        truck_stat += "\n";
+    }
+
+    // add station statistics
+    for (unsigned int ii = 0; ii < _unloadStationCount; ii++)
+    {
+        station_stat += _unloadStations[ii]->GenerateStat();
+        station_stat += "\n";
+    }
+
+    std::cout << truck_stat << std::endl;
+    std::cout << station_stat << std::endl;
+
+    // Write to truck_stat ouput to Ouput/truck_state
+    std::ofstream truck_stat_file("truck_stat.txt");
+    if (truck_stat_file.is_open())
+    {
+        truck_stat_file << truck_stat;
+        truck_stat_file.close();
+    }
+
+    // Write to station_stat ouput
+    std::ofstream station_stat_file("station_stat.txt");
+    if (station_stat_file.is_open())
+    {
+        station_stat_file << station_stat;
+        station_stat_file.close();
     }
 }
 

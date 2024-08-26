@@ -1,0 +1,66 @@
+Lunar Mining Simulation Statistics:
+    Simulation Duration: 4320 min
+    Number of Trucks: 12
+    Number of Mining Sites: 100
+    Number of Unload Stations: 5
+
+Unload Station [1] Statistics:
+    Performance Metrics:
+        Total Resources Processed: 0 T
+        Total Utilization Time: 0 min
+        Total Queue Time: 0 min
+        Number of Trucks Processed: 0
+        Total Idle Time: 4320 min
+    Efficiency Metrics:
+        Average Truck Processing Time: 0.000000 min/truck
+        Station Utilization Rate: 0.000000 %
+        Average Queue Time: 0 min/truck
+
+Unload Station [2] Statistics:
+    Performance Metrics:
+        Total Resources Processed: 152 T
+        Total Utilization Time: 917 min
+        Total Queue Time: 770 min
+        Number of Trucks Processed: 152
+        Total Idle Time: 3403 min
+    Efficiency Metrics:
+        Average Truck Processing Time: 6.032895 min/truck
+        Station Utilization Rate: 21.226852 %
+        Average Queue Time: 5 min/truck
+
+Unload Station [3] Statistics:
+    Performance Metrics:
+        Total Resources Processed: 24 T
+        Total Utilization Time: 145 min
+        Total Queue Time: 125 min
+        Number of Trucks Processed: 24
+        Total Idle Time: 4175 min
+    Efficiency Metrics:
+        Average Truck Processing Time: 6.041667 min/truck
+        Station Utilization Rate: 3.356481 %
+        Average Queue Time: 5 min/truck
+
+Unload Station [4] Statistics:
+    Performance Metrics:
+        Total Resources Processed: 0 T
+        Total Utilization Time: 1 min
+        Total Queue Time: 5 min
+        Number of Trucks Processed: 0
+        Total Idle Time: 4319 min
+    Efficiency Metrics:
+        Average Truck Processing Time: 0.000000 min/truck
+        Station Utilization Rate: 0.023148 %
+        Average Queue Time: 0 min/truck
+
+Unload Station [5] Statistics:
+    Performance Metrics:
+        Total Resources Processed: 0 T
+        Total Utilization Time: 0 min
+        Total Queue Time: 0 min
+        Number of Trucks Processed: 0
+        Total Idle Time: 4320 min
+    Efficiency Metrics:
+        Average Truck Processing Time: 0.000000 min/truck
+        Station Utilization Rate: 0.000000 %
+        Average Queue Time: 0 min/truck
+

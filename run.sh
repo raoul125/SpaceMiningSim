@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf Output/*
+
 # Determine the operating system
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   echo "Running on Linux"
@@ -14,3 +16,6 @@ else
   echo "Unsupported platform"
   exit 1
 fi
+
+mv station_stat.txt Output/
+mv truck_stat.txt Output/
