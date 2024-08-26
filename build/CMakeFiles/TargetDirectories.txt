@@ -1,3 +1,0 @@
-/home/kam/Vast/SpaceMiningSim/build/CMakeFiles/LunarMiningSim.dir
-/home/kam/Vast/SpaceMiningSim/build/CMakeFiles/edit_cache.dir
-/home/kam/Vast/SpaceMiningSim/build/CMakeFiles/rebuild_cache.dir
