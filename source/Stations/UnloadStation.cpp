@@ -52,7 +52,6 @@ void UnloadStation::ProcessTruckQueue()
             if (_currentTruckTime == 0)
             {
                 _totalResourcesProcessed++;
-                _currentTruck = nullptr;
             }
         }
     }

@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
     }
 
     // number of sites must be greater than number of trucks and unload_stations
-    if (num_mining_sites < num_trucks || num_unload_stations < num_trucks)
+    if (num_mining_sites < num_trucks)
     {
         std::cerr << "Invalid arguments. Number of mining sites must be greater than number of trucks and unload stations." << std::endl;
         return 1;
