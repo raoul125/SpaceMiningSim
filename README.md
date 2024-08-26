@@ -1,3 +1,4 @@
+
 # Lunar Helium-3 Mining Simulation
 
 This project simulates a lunar Helium-3 mining operation, modeling the interactions between mining trucks, mining sites, and unload stations.
@@ -5,19 +6,26 @@ This project simulates a lunar Helium-3 mining operation, modeling the interacti
 ## Project Structure
 
 The project is organized as follows:
-
-- **Simulator:**
-    - `Simulator.cpp`: Contains the main simulation loop, managing the interaction between trucks, sites, and stations.
-    - `Simulator.h`: Header file for the Simulator class.
-- **Trucks:**
-    - `MiningTruck.cpp`: Implementation of the MiningTruck class, representing a mining truck.
-    - `MiningTruck.h`: Header file for the MiningTruck class.
-- **Sites:**
-    - `MiningSite.cpp`: Implementation of the MiningSite class, representing a mining site.
-    - `MiningSite.h`: Header file for the MiningSite class.
-- **Stations:**
-    - `UnloadStation.cpp`: Implementation of the UnloadStation class, representing an unload station.
-    - `UnloadStation.h`: Header file for the UnloadStation class.
+├── source
+├  ├── Simulator
+├  │ ├── Simulator.cpp 
+├  │ └── Simulator.h 
+├  ├── Trucks
+├  │ ├── MiningTruck.cpp 
+├  │ └── MiningTruck.h 
+├  ├── Sites 
+├  │ ├── MiningSite.cpp 
+├  │ └── MiningSite.h 
+├  ├── Stations 
+├  │ ├── UnloadStation.cpp 
+├  │ └── UnloadStation.h 
+├  └── LunarMiningSim.cpp
+├── CMakeLists.txt
+├── build.sh
+├── run.sh
+├── .clang-format
+├── .gitignore
+├── README.md
 
 ## Simulation Logic
 
