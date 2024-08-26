@@ -6,6 +6,8 @@ rm -rf bin
 # clean the build folder
 rm -rf build/*
 
+mkdir build
+
 cd build 
 
 cmake .. 
