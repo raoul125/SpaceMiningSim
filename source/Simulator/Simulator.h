@@ -64,7 +64,6 @@ class Simulator
 
    private:
     static const unsigned long SIMULATION_DURATION = 72 * 60;  //!< [min] Simulation duration in minutes
-    static const unsigned int SIMULATION_TIME_STEP = 1;        //!< [min] Simulation step in minutes
     static const unsigned int STATISTIC_INTERVAL = 60;         //!< [min] Statistic interval in minutes
     unsigned int _time = 0;                                    //!< [min] current simulation time
     std::vector<MiningTruck*> _trucks;                         //!< List of trucks

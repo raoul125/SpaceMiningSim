@@ -10,6 +10,8 @@
 
 #include "./Simulator.h"
 
+#include <iostream>
+
 #include "../Sites/MiningSite.h"        // MiningSite class
 #include "../Stations/UnloadStation.h"  // UnloadStation class
 #include "../Trucks/MiningTruck.h"      // MiningTruck class
@@ -61,7 +63,7 @@ void Simulator::Run()
 {
     // Dispatch Trucks to available sites before starting the simulation
     DispatchTrucks();
-    
+
     // Simulation main loop
     while (SIMULATION_DURATION > _time)
     {
@@ -84,7 +86,12 @@ void Simulator::Run()
         }
 
         // Advance time
-        _time += SIMULATION_TIME_STEP;
+        _time++;
+    }
+
+    for (unsigned int ii = 0; ii < _truckCount; ii++)
+    {
+        std::cout << _trucks[ii]->GenerateStat() << std::endl;
     }
 }
 
@@ -97,7 +104,7 @@ void Simulator::Initialize(unsigned int num_trucks, unsigned int num_sites, unsi
     // Create Trucks
     for (unsigned int ii = 0; ii < _truckCount; ii++)
     {
-        MiningTruck* truck = new MiningTruck();
+        MiningTruck* truck = new MiningTruck(ii);
         _trucks.push_back(truck);
     }
 
