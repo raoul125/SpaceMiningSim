@@ -62,9 +62,8 @@ class MiningTruck
      *
      * @param sites
      * @param availableSites
-     * @return MiningSite*
      */
-    MiningSite* FindAvailableSite(std::vector<MiningSite*>& sites, std::unordered_set<unsigned int>& availableSites);
+    void FindAvailableSite(std::vector<MiningSite*>& sites, std::unordered_set<unsigned int>& availableSites);
 
     /**
      * @brief Update truck status

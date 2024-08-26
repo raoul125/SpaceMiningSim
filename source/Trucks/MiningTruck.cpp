@@ -118,7 +118,7 @@ void MiningTruck::Update(unsigned long time, std::vector<UnloadStation*>& statio
                 _currentStation = nullptr;
 
                 // find next available site
-                _currentSite = FindAvailableSite(sites, availableSites);
+                FindAvailableSite(sites, availableSites);
             }
             break;
         }
@@ -143,7 +143,7 @@ UnloadStation* MiningTruck::FindBestUnloadStation(std::vector<UnloadStation*>& s
 
     UnloadStation* station_with_shortest_wait_time = stations[0];
 
-    for (size_t ii = 1; ii < stations.size(); ii++)
+    for (unsigned int ii = 1; ii < stations.size(); ii++)
     {
         if (stations[ii]->GetWaitTime() < station_with_shortest_wait_time->GetWaitTime())
         {
@@ -154,7 +154,7 @@ UnloadStation* MiningTruck::FindBestUnloadStation(std::vector<UnloadStation*>& s
     return station_with_shortest_wait_time;
 }
 
-MiningSite* MiningTruck::FindAvailableSite(std::vector<MiningSite*>& sites,
+void MiningTruck::FindAvailableSite(std::vector<MiningSite*>& sites,
                                            std::unordered_set<unsigned int>& availableSites)
 {
     // Get first available site

@@ -6,10 +6,6 @@ rm -rf bin
 # clean the build folder
 rm -rf build/*
 
-# Clean previous build
-echo "Cleaning Previous build"
-./clean.sh
-
 cd build 
 
 cmake .. 
@@ -20,4 +16,8 @@ cd ..
 
 mkdir bin
 
-cp build/Debug/* bin/
+if [[ "$OSTYPE" == "cygwin" || "$OSTYPE" == "msys" ]]; then
+    cp build/Debug/* bin/
+else
+    cp build/LunarMiningSim bin/
+fi

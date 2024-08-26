@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/LunarMiningSim.dir/source/LunarMiningSim.cpp.o CMakeFiles/LunarMiningSim.dir/source/Simulator/Simulator.cpp.o CMakeFiles/LunarMiningSim.dir/source/Sites/MiningSite.cpp.o CMakeFiles/LunarMiningSim.dir/source/Stations/UnloadStation.cpp.o CMakeFiles/LunarMiningSim.dir/source/Trucks/MiningTruck.cpp.o -o LunarMiningSim 
